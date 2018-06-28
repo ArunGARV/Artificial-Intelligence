@@ -1,3 +1,7 @@
+'''
+Faces and Eyes are detected from the input images. 
+'''
+
 import numpy as np
 import cv2
 
