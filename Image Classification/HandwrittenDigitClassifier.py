@@ -2,7 +2,8 @@
 The MNIST database of handwritten digits, has a training set of 60,000 examples,
 and a test set of 10,000 examples. It is a subset of a larger set available from NIST.
 The digits have been size-normalized and centered in a fixed-size image. 
-This classifier would help to categorize different handwritten images to the specified set of classes.
+This classifier would help to categorize different handwritten images to
+the specified set of 10 classes, using keras library based machine learning algorithm.
 '''
 import numpy as np
 from datetime import datetime
