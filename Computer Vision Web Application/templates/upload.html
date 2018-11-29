@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<base href="http://localhost:5000/templates">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.2s;
+    font-size: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'OP')">Object Prediction</button>
+  <button class="tablinks" onclick="openCity(event, 'OR')">Object Recognition</button>
+  <button class="tablinks" onclick="openCity(event, 'VR')">Video Recognition</button>
+  <button class="tablinks" onclick="openCity(event, 'FD')">Face Detection</button>
+  <button class="tablinks" onclick="openCity(event, 'OCR')">Optical Character Recognition</button>
+  <button class="tablinks" onclick="openCity(event, 'COR')">Customized Object Recognition</button>
+</div>
+
+<div id="OP" class="tabcontent">
+  <h3>Object Prediction</h3>
+  <p>Details on Object Prediction soon to be filled</p> 
+</div>
+
+<div id="OR" class="tabcontent">
+  <h3>Object Recognition</h3>  
+  <p>Details on Object recognition soon to be filled</p>
+  <form action = "http://localhost:5000/indexImageDetection" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>	  
+</div>
+
+<div id="VR" class="tabcontent">
+  <h3>Video Recognition</h3>
+  <p>Details on Video Recognition soon to be filled</p> 
+</div>
+
+<div id="FD" class="tabcontent">
+  <h3>Face Detection</h3>
+  <p>Details on Face Detection soon to be filled</p> 
+     <form action = "http://localhost:5000/indexFaceDetection" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+</div>
+
+<div id="OCR" class="tabcontent">
+  <h3>Optical Character Recognition</h3>
+  <p>OCR details soon to be filled</p>
+  <form action = "http://localhost:5000/indexOCR" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+</div>
+
+<div id="COR" class="tabcontent">
+  <h3>Customized Object Recognition</h3>
+  <p>Details on Customized Object Recognition soon to be filled</p> 
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+</body>
+</html> 
+
