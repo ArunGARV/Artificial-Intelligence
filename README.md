@@ -29,8 +29,7 @@ for being an acumen in artificial intelligence. Following are the break downs wh
 for implementing computer vision:
 
 ```
-	Image Classification
-	Image Detection
+	Image Prediction
 	Image Recognition
 	Face Detection
 	Face Recognition
